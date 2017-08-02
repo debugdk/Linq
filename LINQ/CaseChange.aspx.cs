@@ -16,7 +16,9 @@ namespace LINQ
 
         protected void txtInput_TextChanged(object sender, EventArgs e)
         {
-            lblResult.Text=txtInput.Text.changeCase();
+            string input = txtInput.Text;
+            string output = input.changeCase();
+            lblResult.Text = output;
         }
     }
 }

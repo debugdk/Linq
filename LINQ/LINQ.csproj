@@ -74,6 +74,7 @@
   <ItemGroup>
     <Content Include="AggegateFun.aspx" />
     <Content Include="Aggregate.aspx" />
+    <Content Include="AvgTime.aspx" />
     <Content Include="CaseChange.aspx" />
     <Content Include="DatatableToLinq.aspx" />
     <Content Include="IntroToLINQ.aspx" />
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="Aggregate.aspx.designer.cs">
       <DependentUpon>Aggregate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AvgTime.aspx.cs">
+      <DependentUpon>AvgTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvgTime.aspx.designer.cs">
+      <DependentUpon>AvgTime.aspx</DependentUpon>
     </Compile>
     <Compile Include="CaseChange.aspx.cs">
       <DependentUpon>CaseChange.aspx</DependentUpon>

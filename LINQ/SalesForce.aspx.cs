@@ -12,18 +12,14 @@ namespace LINQ
         protected void Page_Load(object sender, EventArgs e)
         {
             char [] c={':'};
-            string[] time = { "1:20", "2:10", "1:2", "3:40" };
+            string[] time = { "1:20", "2:10", "","1:2", "3:40" };
 
-            var min = time.Select(x =>
-                                    new
-                                    {
-                                        min = x[0],
-                                        sec = x.ToString().Remove(1,x.Length)
-                                    });
+            var min = time.Select(x =>x==""?0:x[0]);
+                                    
 
             foreach (var m in min)
             {
-                Response.Write(m.min+" "+m.sec+ "<br/>");
+                Response.Write(m);
             }
             
             //var sec = time.Select(x => x.Length == 0 ? null : x.Split(c, 2));

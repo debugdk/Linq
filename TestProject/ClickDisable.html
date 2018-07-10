@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#a').on('click', function () {
+                $('#clickElement').off('click');
+            });
+            $('#b').on('click', function () {
+                alert('Welcome to CodexWorld!');
+            });
+        });
+        $(document).ready(function () {
+            $('#a').bind("contextmenu", function (e) {
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="a" style="border:double">
+        <input id="Text1" type="text" onclick="test()" /><br />
+        <input id="Button1" type="button" value="button" onclick="test()" /><br />
+        <input id="Submit1" type="submit" value="submit" onclick="test()" /><br />
+    </div>
+    <br />
+    <br />
+    <div id="b" style="border:double">
+        <input id="Text1" type="text" onclick="test()" /><br />
+        <input id="Button1" type="button" value="button" onclick="test()" /><br />
+        <input id="Submit1" type="submit" value="submit" onclick="test()" /><br />
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+﻿    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Calculator</title>
+        <link href="bootstrap.css" rel="stylesheet" />
+        <script>
+            function cal(x)
+            {
+                var e = document.getElementById(x);
+                var ans = document.getElementById('ans');
+                var num = document.getElementById('number');
+                var op = document.getElementById('operator');
+                if (x == 'can') {
+                    ans.value = '0';
+                    num.value = '';
+                    op.value = '';
+                }
+                else
+                {
+                    if (x != 'eq') {
+                        if (ans.value == 0) {
+                            ans.value = e.value;
+                        }
+                        else {
+                            switch (x) {
+                                case 'n1':
+                                case 'n2':
+                                case 'n3':
+                                case 'n4':
+                                case 'n5':
+                                case 'n6':
+                                case 'n7':
+                                case 'n8':
+                                case 'n9':
+                                case 'n0':
+                                    if (op.value.length == 0) {
+                                        ans.value = ans.value + e.value;
+                                    }
+                                    else {
+                                        ans.value = e.value;
+                                    }
+                                    break;
+                                case 'multi':
+                                case 'div':
+                                case 'sum':
+                                case 'sub':
+                                    num.value = ans.value;
+                                    op.value = x;
+                                    break;
+                                default:
+                                    num.value = '';
+                                    op.value = '';
+                            }
+                        
+                        }
+                    }
+                    else {
+                        if (ans.value.length == 0) {
+                            alert('Enter In propar manner');
+                        }
+                        else {
+                            var num1 = ans.value;
+                            var num2 = num.value;
+                            var res;
+                            switch (op.value) {
+                                case 'multi':
+                                    res = Number(num1) *Number(num2);
+                                    break;
+                                case 'div':
+                                    res = Number(num1) / Number(num2);
+                                    break;
+                                case 'sum':
+                                    res = Number(num1) + Number(num2);
+                                    break;
+                                case 'sub':
+                                    res =Number(num1) - Number(num2);
+                                    break;
+                                default:
+                                    res = 0;
+                            }
+                            ans.value = res;
+                            num.value = res;
+                        }
+                    }
+                }   
+            }
+        </script>
+        <style>
+            .marginTop {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+            <br />
+            <div class="col-lg-4 col-lg-offset-4 panel panel-primary">
+                <div class="panel-heading">Calculator</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <input type="hidden" class="form-control" id="number" />
+                            <input type="hidden" class="form-control" id="operator" />
+                            <input type="text" readonly class="form-control" id="ans" value="0" />
+                        </div>
+                    </div>
+                    <div class="row marginTop">
+                        <div class="col-lg-3"><input type="button" value="7" id="n7" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="8" id="n8" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="9" id="n9" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="X" id="multi" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                    </div>
+                    <div class="row marginTop">
+                        <div class="col-lg-3"><input type="button" value="4" id="n4" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="5" id="n5" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="6" id="n6" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="/" id="div" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                    </div>
+                    <div class="row marginTop">
+                        <div class="col-lg-3"><input type="button" value="1" id="n1" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="2" id="n2" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="3" id="n3" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="+" id="sum" onclick="cal(this.id)" class="btn btn-primary form-control"></div>
+                    </div>
+                    <div class="row marginTop">
+                        <div class="col-lg-3"><input type="button" value="0" onclick="cal(this.id)" id="n0" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="=" onclick="cal(this.id)" id="eq" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="C" onclick="cal(this.id)" id="can" class="btn btn-primary form-control"></div>
+                        <div class="col-lg-3"><input type="button" value="-" onclick="cal(this.id)" id="sub" class="btn btn-primary form-control"></div>
+                    </div>
+                </div>
+            </div>
+    </body>
+    </html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+   <style>
+       .avoid-clicks {
+           pointer-events: none;
+       }
+   </style>
+    <script>
+        function test()
+        {
+            alert('hello');
+        }
+    </script>
+</head>
+<body>
+    <div id="a" style="border:double" class="avoid-clicks">
+        <input id="Text1" type="text" onclick="test()" /><br />
+        <input id="Button1" type="button" value="button" onclick="test()" /><br />
+        <input id="Submit1" type="submit" value="submit" onclick="test()" /><br />
+    </div>
+    <br />
+    <br />
+    <div id="b" style="border:double">
+        <input id="Text1" type="text" onclick="test()" /><br />
+        <input id="Button1" type="button" value="button" onclick="test()" /><br />
+        <input id="Submit1" type="submit" value="submit" onclick="test()" /><br />
+        <a href="/DisableBack.aspx">Go to Second Page</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

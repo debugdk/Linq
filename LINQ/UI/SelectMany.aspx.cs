@@ -40,6 +40,7 @@ namespace LINQ.UI
                 Response.Write(r.StudentName+ "--"+r.SubjectName);
                 Response.Write("<br/>");
             }
+            Response.Write("<hr/>");
             IEnumerable<List<string>> res= Student.GetAllStudent().Select(s => s.subjects);
             foreach (List<string> liststing in res)
             {

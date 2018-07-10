@@ -1,0 +1,14 @@
+E:\other Project\TestProject\TestConsole\bin\Debug\TestConsole.exe.config
+E:\other Project\TestProject\TestConsole\bin\Debug\TestConsole.exe
+E:\other Project\TestProject\TestConsole\bin\Debug\TestConsole.pdb
+E:\other Project\TestProject\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+E:\other Project\TestProject\TestConsole\obj\Debug\TestConsole.exe
+E:\other Project\TestProject\TestConsole\obj\Debug\TestConsole.pdb
+E:\other Project\TestProject\TestConsole\obj\Debug\TestConsole.csproj.CoreCompileInputs.cache
+D:\other Project\TestProject\TestConsole\bin\Debug\TestConsole.exe.config
+D:\other Project\TestProject\TestConsole\bin\Debug\TestConsole.exe
+D:\other Project\TestProject\TestConsole\bin\Debug\TestConsole.pdb
+D:\other Project\TestProject\TestConsole\obj\Debug\TestConsole.csprojAssemblyReference.cache
+D:\other Project\TestProject\TestConsole\obj\Debug\TestConsole.csproj.CoreCompileInputs.cache
+D:\other Project\TestProject\TestConsole\obj\Debug\TestConsole.exe
+D:\other Project\TestProject\TestConsole\obj\Debug\TestConsole.pdb
